@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderPane" prefHeight="557.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itgroup.controller.BarChartController">
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="60.0" spacing="10.0">
+            <children>
+                <Label text="보여 주기 방식">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+                <RadioButton fx:id="radioHorizontal" mnemonicParsing="false" text="수평 막대">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="toggleGroup"/>
+                    </toggleGroup>
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="radioVertical" toggleGroup="$toggleGroup"  mnemonicParsing="false" text="수직 막대">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </RadioButton>
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <BarChart BorderPane.alignment="CENTER">
+            <xAxis>
+                <CategoryAxis side="BOTTOM"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT"/>
+            </yAxis>
+        </BarChart>
+    </center>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+</BorderPane>
